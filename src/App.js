@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+
 import './App.css';
 import React from "react";
+import Users from './Components/Users';
 
-const App = () => {
+function App(){
   return(
-    <div className="fetch">
-      <h1>Welcome to LGM VIP</h1>
-      <button>Get User</button>
-      <h3>Users are : </h3>
-      <ul>
-        <li>Anusha</li>
-        <li>Alisha</li>
-        <li>Nathen</li>
-      
-</ul>
+    <div className="App">
+      <h1>Welcome to my LGM-TASK2</h1>
+      <Users/>
       
     </div>
   )
-  
 }
 
 export default App;
