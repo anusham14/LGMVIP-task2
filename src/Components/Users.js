@@ -11,24 +11,40 @@ function Users (){
 
     //users = current value setUsers = func
     const [users,setUsers] = useState([]);
+    const [showSpinner,setShowSpinner]=useState(false);
+
 
     //func to get users
     const getUsers = async() =>{
+
+        setShowSpinner(true);
         const res = await axios.get('https://reqres.in/api/users?page=1')
+
         console.log(res) //get response of API in console
         const userData = res.data.data;
         setUsers(userData)
         }
 
     return(
-    <>
-        <button onClick={getUsers}>Get users</button>
+    <div id="users">
+        <button onClick={getUsers} id="get">Get users</button>
+
         <ul>
+           
             {users.map(user =>(
-                <li key={user.id}> <b>Name :</b> {user.first_name} {user.last_name} <b> Email :</b> {user.email}</li>
-            ))}
+                    <li key={user.id} className="user">
+                        <div>
+                            <img src={user.avatar} className="avatar"/>
+                        </div>
+                        <div className="info">
+                            <b>Name :</b> {user.first_name} {user.last_name} <br/><b> Email :</b> {user.email}
+                        </div>
+                        
+                    </li>
+                ))}
+
         </ul>
-    </>
+    </div>
         
     ) 
      
