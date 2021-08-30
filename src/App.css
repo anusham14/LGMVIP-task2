@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+.user{
+  padding: 2%;
+  margin-left: 35%;
+  border-radius: 2%;
+  width: 26%;
+  background: rgb(49, 49, 49);
+  color: #ffffff;
+  margin-top: 50px;
+}
+.avatar{
+  border: 2px solid #ffffff;
+  width: 150px;
+  height: 150px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: auto;
+}
+
+#get{
+
+  border: none;
+  border-radius: 5px;
+  color: #fefeff;
+  width: 100px;
+  height: 50px;
+  background: rgb(32, 221, 32);
+}
